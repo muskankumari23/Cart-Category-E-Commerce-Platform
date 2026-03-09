@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest | Everything You Need. Delivered.</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Config -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-top">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-brand">
+                <i class="fa-solid fa-basket-shopping brand-logo"></i>
+                ShopNest
+            </a>
+
+            <!-- Location Selector -->
+            <div class="nav-location">
+                <i class="fa-solid fa-location-dot location-icon"></i>
+                <div class="location-text">
+                    <span>Delivering to <span id="current-city">New Delhi</span></span>
+                    <span class="location-bold">Update Location <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.7rem;"></i></span>
+                </div>
+            </div>
+
+            <!-- Global Search -->
+            <div class="nav-search">
+                <div class="search-input-group">
+                    <select class="search-category" name="category">
+                        <option value="all">All</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="food">Food</option>
+                        <option value="grocery">Fast Delivery</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search for products, food, groceries...">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="profile.html" class="action-item">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="action-item">
+                    <div class="action-badge">2</div>
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Wishlist</span>
+                </a>
+                <a href="#" class="action-item">
+                    <div class="action-badge">4</div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Links Navigation -->
+        <div class="nav-bottom">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="shopping.html" class="nav-link">Shopping</a></li>
+                    <li><a href="food.html" class="nav-link">Order Food</a></li>
+                    <li><a href="fast-delivery.html" class="nav-link">Fast Delivery (10 Min)</a></li>
+                    <li><a href="offers.html" class="nav-link">Offers</a></li>
+
+                    <div class="service-nav">
+                        <a href="fast-delivery.html" class="service-badge"><i class="fa-solid fa-bolt"
+                                style="color:#F59E0B"></i> Blink Delivery</a>
+                        <a href="food.html" class="service-badge"><i class="fa-solid fa-utensils"
+                                style="color:#F97316"></i> Delicious Food</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <section class="section" style="padding-top: 50px; min-height: 60vh;">
+        <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 15px; color: var(--dark-navy);">Get in Touch</h1>
+            <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 40px;">We'd love to hear from you. Please fill out this form or shoot us an email.</p>
+
+            <div style="display: flex; gap: 40px; text-align: left; background: var(--white); box-shadow: var(--shadow-lg); border-radius: var(--radius-lg); padding: 40px;">
+                <div style="flex: 1;">
+                    <form onsubmit="event.preventDefault();">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--dark-navy);">Full Name</label>
+                            <input type="text" placeholder="John Doe" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--dark-navy);">Email Address</label>
+                            <input type="email" placeholder="john@example.com" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--dark-navy);">Message</label>
+                            <textarea placeholder="How can we help you?" style="width: 100%; padding: 12px 15px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); outline: none; font-size: 1rem; min-height: 120px; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1.05rem;">Send Message</button>
+                    </form>
+                </div>
+                <div style="width: 1px; background: var(--border-color);"></div>
+                <div style="flex: 1; padding: 10px;">
+                    <h3 style="margin-bottom: 20px; color: var(--dark-navy);">Contact Information</h3>
+                    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                        <div style="width: 40px; height: 40px; background: var(--primary-light); color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 3px;">Our Office</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">123 Tech Park, Innovate City<br>California, CA 90210</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; margin-bottom: 25px;">
+                        <div style="width: 40px; height: 40px; background: var(--primary-light); color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 3px;">Call Us</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">+1 (234) 567-890<br>Mon-Fri, 9am to 6pm</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px;">
+                        <div style="width: 40px; height: 40px; background: var(--primary-light); color: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0;"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin-bottom: 3px;">Email Us</h4>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">support@shopnest.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Unified Global Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand">
+                        <i class="fa-solid fa-basket-shopping brand-logo"></i>
+                        ShopNest
+                    </a>
+                    <p class="footer-desc">Your ultimate destination for online shopping, sizzling food delivery, and
+                        10-minute grocery runs. Experience a premium lifestyle with ShopNest.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Our Services</h4>
+                    <div class="footer-links">
+                        <a href="shopping.html">Online Shopping</a>
+                        <a href="food.html">Food Delivery</a>
+                        <a href="fast-delivery.html">Fast Grocery (10 Min)</a>
+                        <a href="offers.html">Weekly Offers</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="profile.html">My Account</a>
+                        <a href="orders.html">Track Order</a>
+                        <a href="contact.html">Customer Support</a>
+                        <a href="faq.html">FAQs</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="footer-links">
+                        <a href="mailto:support@shopnest.com"><i class="fa-regular fa-envelope"></i>
+                            support@shopnest.com</a>
+                        <a href="tel:+1234567890"><i class="fa-solid fa-phone"></i> +1 (234) 567-890</a>
+                        <a href="#"><i class="fa-solid fa-location-dot"></i> 123 Tech Park, Innovate City</a>
+                    </div>
+                </div>
+
+                <div class="newsletter-group">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <div class="newsletter-box">
+                        <p>Subscribe to our newsletter for exclusive deals and fastest delivery updates.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault();">
+                            <input type="email" placeholder="Enter email address" required>
+                            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; <span id="year">2026</span> ShopNest Inc. All rights reserved. Built with ❤️ for a unified
+                premium experience.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
