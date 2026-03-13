@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Account | ShopNest</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Config -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-top">
+            <a href="index.html" class="nav-brand">
+                <i class="fa-solid fa-basket-shopping brand-logo"></i>
+                ShopNest
+            </a>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline" style="padding: 8px 20px; border-radius: var(--radius-full);">Log In</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <div class="container" style="display: flex; justify-content: center;">
+            <div class="auth-card verify-card" style="max-width: 500px; width: 100%;">
+                <div class="auth-header" style="text-align: center;">
+                    <div class="verify-icon-wrapper" style="font-size: 3rem; color: var(--success); margin-bottom: 20px;">
+                        <i class="fa-regular fa-envelope-open"></i>
+                    </div>
+                    <h2>Verify Your Email</h2>
+                    <p style="margin-top: 10px;">We've sent a verification link to your email address. Please click the link to activate your account.</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Didn't receive the email?</p>
+                    <button class="btn btn-outline w-100" id="resend-verification-btn">
+                        <i class="fa-solid fa-rotate-right" style="margin-right: 8px;"></i> Resend Verification Email
+                    </button>
+                    <div class="alert-box" id="verify-alert" style="display: none; margin-top: 15px;"></div>
+                </div>
+
+                <div class="auth-footer" style="text-align: center; margin-top: 30px;">
+                    <p><a href="login.html"><i class="fa-solid fa-arrow-left"></i> Back to Login</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
