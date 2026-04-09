@@ -7,14 +7,15 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const JWT_SECRET = 'shopnest_super_secret_key_123'; // Replace with env variable in production
+const JWT_SECRET = 'cart_super_secret_key_123'; // Replace with env variable in production
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../')));
 
 // Database Setup
-const dbPath = path.resolve(__dirname, 'shopnest.db');
+const dbPath = path.resolve(__dirname, 'cart.db');
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Error connecting to database:', err.message);
@@ -85,7 +86,7 @@ app.post('/api/auth/register', async (req, res) => {
             console.log(`\n======================================`);
             console.log(`[EMAIL DISPATCH SYSTEM - SIMULATION]`);
             console.log(`To: ${email}`);
-            console.log(`Subject: Verify your ShopNest Account`);
+            console.log(`Subject: Verify your Cart Account`);
             console.log(`Body: Click the link to verify: http://localhost:${PORT}/api/auth/verify-email?email=${encodeURIComponent(email)}`);
             console.log(`======================================\n`);
 
@@ -110,7 +111,7 @@ app.get('/api/auth/verify-email', (req, res) => {
         res.send(`
             <div style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
                 <h1 style="color: #22C55E;">Email Verified Successfully!</h1>
-                <p>You can now close this tab and log in to ShopNest.</p>
+                <p>You can now close this tab and log in to Cart.</p>
                 <script>setTimeout(() => { window.close(); }, 3000);</script>
             </div>
         `);
@@ -168,7 +169,7 @@ app.post('/api/auth/send-otp', (req, res) => {
             console.log(`\n======================================`);
             console.log(`[SMS DISPATCH SYSTEM - SIMULATION]`);
             console.log(`To: ${phone}`);
-            console.log(`Message: ${otp} is your ShopNest verification code. Valid for 5 minutes.`);
+            console.log(`Message: ${otp} is your Cart verification code. Valid for 5 minutes.`);
             console.log(`======================================\n`);
 
             return sendResponse(res, 200, true, "OTP sent successfully.");
@@ -219,5 +220,5 @@ app.post('/api/auth/verify-otp', (req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-    console.log(`ShopNest Auth Backend running on http://localhost:${PORT}`);
+    console.log(`Cart Auth Backend running on http://localhost:${PORT}`);
 });

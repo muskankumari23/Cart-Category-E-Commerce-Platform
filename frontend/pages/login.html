@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cart</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome Config -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-top">
+            <!-- Logo -->
+            <a href="index.html" class="nav-brand">
+                <i class="fa-solid fa-basket-shopping brand-logo"></i>
+                Cart
+            </a>
+            <!-- Right Actions -->
+            <div class="nav-actions">
+                <a href="signup.html" class="btn btn-outline" style="padding: 8px 20px; border-radius: var(--radius-full);">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-main">
+        <div class="container">
+            <div class="auth-wrapper">
+                <!-- Left Decorative Side (Desktop Only) -->
+                <div class="auth-graphics desktop-only">
+                    <div class="graphics-content">
+                        <h2>Welcome Back to <span style="color: var(--primary-color);">Cart</span></h2>
+                        <p>Sign in to access your orders, wishlist, and exclusive member discounts.</p>
+                        <ul class="auth-perks">
+                            <li><i class="fa-solid fa-circle-check"></i> Fast 10-Minute Grocery Delivery</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Premium Fashion & Electronics</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Delicious Food Delivered Hot</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Form Side -->
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h2>Log In</h2>
+                        <p>Choose your preferred login method.</p>
+                    </div>
+
+                    <!-- Tabs -->
+                    <div class="auth-tabs">
+                        <button class="tab-btn active" data-tab="tab-phone">Phone number</button>
+                        <button class="tab-btn" data-tab="tab-email">Email</button>
+                    </div>
+
+                    <div class="alert-box" id="login-alert" style="display: none;"></div>
+
+                    <!-- Phone Login Form -->
+                    <form id="phone-login-form" class="auth-form tab-content active" onsubmit="event.preventDefault();">
+                        
+                        <!-- Step 1: Request OTP -->
+                        <div id="phone-step-1">
+                            <div class="input-group">
+                                <label for="login-phone">Mobile Number</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-phone input-icon"></i>
+                                    <input type="tel" id="login-phone" placeholder="Enter your 10-digit number" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary auth-btn w-100" id="send-otp-btn">
+                                Send OTP <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Step 2: Verify OTP (Hidden initially) -->
+                        <div id="phone-step-2" style="display: none;">
+                            <p class="otp-sent-text">We sent an OTP to <span id="display-phone-num"></span> <button type="button" class="edit-phone-btn" id="edit-phone"><i class="fa-solid fa-pen-to-square"></i></button></p>
+                            
+                            <div class="input-group">
+                                <label for="login-otp">Enter OTP</label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-lock input-icon"></i>
+                                    <input type="text" id="login-otp" placeholder="Enter 6-digit OTP" maxlength="6">
+                                </div>
+                            </div>
+                            <div class="otp-actions">
+                                <span class="resend-timer" id="resend-timer">Resend in 00:30</span>
+                                <button type="button" class="resend-btn" id="resend-otp-btn" disabled>Resend OTP</button>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary auth-btn w-100" id="verify-otp-btn">
+                                Verify & Login
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Email Login Form (Hidden initially) -->
+                    <form id="email-login-form" class="auth-form tab-content" style="display: none;" onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <label for="login-email">Email Address</label>
+                            <div class="input-wrapper">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                                <input type="email" id="login-email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="label-row">
+                                <label for="login-password">Password</label>
+                                <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                            </div>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <input type="password" id="login-password" placeholder="Enter your password" required>
+                                <button type="button" class="password-toggle"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary auth-btn w-100" id="email-submit-btn">
+                            Log In
+                        </button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>New to Cart? <a href="signup.html">Create an account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

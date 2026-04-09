@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await res.json();
                 
                 if (data.success) {
-                    localStorage.setItem('shopnest_token', data.data.token);
-                    localStorage.setItem('shopnest_user', JSON.stringify(data.data.user));
+                    localStorage.setItem('cart_token', data.data.token);
+                    localStorage.setItem('cart_user', JSON.stringify(data.data.user));
                     showAlert('login-alert', true, 'Login successful! Redirecting...');
                     setTimeout(() => window.location.href = 'index.html', 1500);
                 } else {
@@ -230,8 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const data = await res.json();
                     
                     if (data.success) {
-                        localStorage.setItem('shopnest_token', data.data.token);
-                        localStorage.setItem('shopnest_user', JSON.stringify(data.data.user));
+                        localStorage.setItem('cart_token', data.data.token);
+                        localStorage.setItem('cart_user', JSON.stringify(data.data.user));
                         showAlert('login-alert', true, 'Verification successful! Redirecting...');
                         setTimeout(() => window.location.href = 'index.html', 1500);
                     } else {
