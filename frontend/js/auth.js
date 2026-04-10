@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => { alertBox.style.display = 'none'; }, 5000);
         }
     };
-
     // Form Loading State
     const toggleButtonLoading = (btnId, isLoading, originalText = '') => {
         const btn = document.getElementById(btnId);
