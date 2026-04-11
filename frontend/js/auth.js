@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = false;
         }
     };
-
     // Password Toggle Show/Hide
     const passwordToggles = document.querySelectorAll('.password-toggle');
     passwordToggles.forEach(toggle => {
